@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=depth-width, initial-scale=1.0" />
-        <title>Flask Starter App</title>
-      </head>
-      <body>
-        <div class="container">
-            <header class="profile-header">
-                <img src="{{url_for('static', filename='profile.') }}" alt="Profile Picture" />
-                <h1>Marissa O'Meally</h1>
-                <p class="username">@rissa</p>
-                <p>Kingston, Jamaica</p>
-                <p class="date-joined"></p>
-            </header>
+{% extends "base.html" %}
 
-            <div class="profile-body">
-                <p>I am a smart and talented young woman who loves website design and development. 
-                    Contact me if you'd like to work together on a new project.</p>
-            </div>
+{% block main %}
+ <div class="container">
+    <header class="profile-header">
+        <img src="{{url_for('static', filename='profile.jpg') }}" alt="Profile Picture" />
+        <h1>Marissa O'Meally</h1>
+        <p class="username">@rissa</p>
+        <p class="location">Kingston, Jamaica</p>
+        <p class="date-join">Joined {{date_joined}} </p>
+    </header>
 
-            <div class="stats">
-                <div>
-                    <h3>10</h3>
-                    <p>Posts</p>
-                </div>
-                <div>
-                    <h3>7</h3>
-                    <p>Following</p>
-                </div>
-                <div>
-                    <h3>300</h3>
-                    <p>Followers</p>
-                </div>
-                <button class="btn">Follow</button>
-            </div>
+    <div class="profile-body">
+        <p>I am a smart and talented young woman who loves website design and development. 
+            Contact me if you'd like to work together on a new project.</p>
+    </div>
+
+    <div class="stats">
+        <div>
+            <h3>10</h3>
+            <p>Posts</p>
         </div>
-      </body>
-</html>
-  
+        <div>
+            <h3>7</h3>
+            <p>Following</p>
+        </div>
+        <div>
+            <h3>300</h3>
+            <p>Followers</p>
+        </div>
+        <button class="btn">Follow</button>
+    </div>
+
+ </div>    
+{% endblock %}
+
+
+        
+    
+      
+       
