@@ -16,7 +16,7 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Marissa O'Meally")
+    return render_template('about.html', name="Samantha Simpson")
 
 
 @app.route('/profile')
